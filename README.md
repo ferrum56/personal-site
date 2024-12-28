@@ -1,5 +1,7 @@
 # Personal Website
 
+![Node workflow](https://github.com/ferrum56/personal-site/actions/workflows/node.js.yml/badge.svg)
+
 The repository for my personal website. A simple and modern TypeScript Vue-based website.
 
 ### Technologies
