@@ -1,0 +1,10 @@
+**/*.json
+**/*.md
+**/*.cjs
+**/*.mjs
+**/*.config.ts
+**/*.d.ts
+**/*.vue
+node_modules/
+dist/
+.yarn/
