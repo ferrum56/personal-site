@@ -6,6 +6,9 @@ import path from 'path';
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [vue()],
+    define: {
+        __PROJECT_VERSION__: JSON.stringify(process.env.npm_package_version),
+    },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),
