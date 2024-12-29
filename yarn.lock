@@ -763,6 +763,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@quasar/vite-plugin@npm:^1.8.1":
+  version: 1.8.1
+  resolution: "@quasar/vite-plugin@npm:1.8.1"
+  peerDependencies:
+    "@vitejs/plugin-vue": ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
+    quasar: ^2.16.0
+    vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0-beta.9
+    vue: ^3.0.0
+  checksum: 10c0/c7e8a81af7a49464eac728b3483966bf5375a904e2d0ef2a7ea156db417ed08eef654cf4bdb256aa1f59d1986c0795e420cd704d0b55bd98829be2bc72b5558c
+  languageName: node
+  linkType: hard
+
 "@rollup/rollup-android-arm-eabi@npm:4.29.1":
   version: 4.29.1
   resolution: "@rollup/rollup-android-arm-eabi@npm:4.29.1"
@@ -3215,6 +3227,7 @@ __metadata:
   resolution: "personal-site@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.17.0"
+    "@quasar/vite-plugin": "npm:^1.8.1"
     "@vitejs/plugin-vue": "npm:^5.2.1"
     "@vitest/coverage-istanbul": "npm:^2.1.8"
     "@vue/tsconfig": "npm:^0.7.0"
@@ -3224,6 +3237,7 @@ __metadata:
     husky: "npm:^9.1.7"
     lint-staged: "npm:^15.3.0"
     prettier: "npm:^3.4.2"
+    quasar: "npm:^2.17.5"
     typescript: "npm:~5.7.2"
     typescript-eslint: "npm:^8.18.2"
     vite: "npm:^6.0.5"
@@ -3315,6 +3329,13 @@ __metadata:
   version: 2.3.1
   resolution: "punycode@npm:2.3.1"
   checksum: 10c0/14f76a8206bc3464f794fb2e3d3cc665ae416c01893ad7a02b23766eb07159144ee612ad67af5e84fa4479ccfe67678c4feb126b0485651b302babf66f04f9e9
+  languageName: node
+  linkType: hard
+
+"quasar@npm:^2.17.5":
+  version: 2.17.5
+  resolution: "quasar@npm:2.17.5"
+  checksum: 10c0/00eed2ebcbf9d72d6e9e5a97742000ab6364e6e256834f50036d4ac88e5bb4c67345a5cbc3280d747eec288e21f289c3a9ba13ea616e3ed4f1a7f4d9b101483c
   languageName: node
   linkType: hard
 
