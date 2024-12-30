@@ -6,9 +6,9 @@ The repository for my personal website. A simple and modern TypeScript Vue-based
 
 ## About Fonts and Icons
 
-The fonts used in this project are from Google Fonts. The fonts are:
+The website uses multiple fonts.
 
-I used Font Awesome for the icons. The icons are:
+The icon set used is the free version of Font Awesome 6 with solid, regular, and brand icons. SVG icons are chosen to enable tree-shaking and reduce bundle size.
 
 ## Disclaimer on License
 
