@@ -4,6 +4,16 @@
 
 The repository for my personal website. A simple and modern TypeScript Vue-based website.
 
+## About Fonts and Icons
+
+The website uses multiple fonts.
+
+The icon set used is the free version of Font Awesome 6 with solid, regular, and brand icons. SVG icons are chosen to enable tree-shaking and reduce bundle size.
+
+## Disclaimer on License
+
+The MIT license **only applies to the code** in this repository. All non-code content of the website, including images, texts, and other assets, inside but not limited to the `public`, `src/assets`, and `content` directories, are **not covered by the MIT license**, and should not be used, reproduced, or distributed without permission. This means they are implicitly copyrighted unless otherwise stated, either in the repository, on the website, or by the respective owners.
+
 ### Technologies
 
 Important technologies and their versions are listed here. For all packages check the `package.json` file.
