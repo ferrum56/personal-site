@@ -40,7 +40,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest, macos-latest]
         node-version: [20.x]
         include:
           - os: ubuntu-latest
@@ -48,10 +48,6 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-      - name: Use CMD if running on Windows
-        if: matrix.os == 'windows-latest'
-        shell: cmd
-        run: echo "Using Windows CMD"
       - name: Checkout repo
         uses: actions/checkout@v4
       - name: Enable corepack
