@@ -1,5 +1,7 @@
 <script setup lang="ts">
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons';
 
+import { toQIcon } from '@/utils/icon-util';
 </script>
 
 <template>
@@ -7,6 +9,7 @@
     <p>
         This is the home view.
     </p>
+    <q-icon :name="toQIcon(faXTwitter)" />
 </template>
 
 <style scoped>
