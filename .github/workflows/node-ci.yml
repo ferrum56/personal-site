@@ -48,6 +48,8 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
+      - name: Check for windows CMD
+        shell: ${{ matrix.os == 'windows-latest' && 'cmd' || 'bash' }}
       - name: Checkout repo
         uses: actions/checkout@v4
       - name: Enable corepack
