@@ -50,6 +50,8 @@ jobs:
     steps:
       - name: Check for windows CMD
         shell: ${{ matrix.os == 'windows-latest' && 'cmd' || 'bash' }}
+        run: |
+          echo "OS checked"
       - name: Checkout repo
         uses: actions/checkout@v4
       - name: Enable corepack
