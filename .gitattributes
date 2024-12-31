@@ -1,0 +1,14 @@
+* text=auto
+
+# Make sure following script files use CRLF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Make sure image files are treated as binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.tif binary
+*.tiff binary
+*.ico binary
