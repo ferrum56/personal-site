@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Novecento Sans Wide';
+    src: url('@/assets/fonts/novecento-sans-wide-normal.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+.font-nsw {
+    font-family: 'Novecento Sans Wide', Inter, sans-serif;
+}
