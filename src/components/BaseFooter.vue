@@ -8,12 +8,15 @@ import socialLinks from '/content/social-links';
             <q-btn v-for="link in socialLinks" :key="link.name" :icon="link.icon" :href="link.url" target="_blank"
                 flat dense round class="q-ml-sm q-mr-sm text-white" aria-label="link.name" />
         </div>
-        <div class="text-center q-mt-sm q-mb-md">
-            © 2024 -- {{ new Date().getFullYear() }} Alan Zheng. All Rights Reserved.
+        <div id="footer-copyright" class="text-center q-mt-sm q-mb-md font-nsw all-caps">
+            © Alan Zheng. All Rights Reserved.
         </div>
     </q-footer>
 </template>
 
 <style scoped>
-
+#footer-copyright {
+    font-size: 0.5rem;
+    font-weight: 200;
+}
 </style>

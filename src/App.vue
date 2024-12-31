@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import BaseNavbar from '@/components/BaseNavbar.vue';
+import BaseFooter from '@/components/BaseFooter.vue';
 </script>
 
 <template>
@@ -10,7 +12,13 @@
     <!--            <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />-->
     <!--        </a>-->
     <!--    </div>-->
-    <router-view />
+    <q-layout view="hHh lpR fFf">
+        <base-navbar class="font-nsw" />
+        <q-page-container>
+            <router-view />
+        </q-page-container>
+        <base-footer />
+    </q-layout>
 </template>
 
 <style scoped>
