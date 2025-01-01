@@ -13,6 +13,8 @@ export default defineConfig({
     ],
     define: {
         __PROJECT_VERSION__: JSON.stringify(process.env.npm_package_version),
+        __EO2024__: JSON.stringify('The intelligent creatures on Sol-3 celebrate their planet\'s completion of' +
+            'another orbital revolution around their star.'),
     },
     resolve: {
         alias: {
