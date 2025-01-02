@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import socialLinks from '~/content/social-links';
+import socialLinks from '@/content/social-links';
 </script>
 
 <template>
