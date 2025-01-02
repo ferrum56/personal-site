@@ -2,12 +2,7 @@ import { faDiscord, faGithub, faLinkedinIn, faXTwitter } from '@fortawesome/free
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 
 import { toQIcon } from '@/utils/icon-util';
-
-export interface SocialLink {
-    name: string;
-    icon: string;
-    url: string;
-}
+import type { SocialLink } from '@/content/types';
 
 export default [
     { name: 'GitHub', icon: toQIcon(faGithub), url: 'https://github.com/ferrum56' },
