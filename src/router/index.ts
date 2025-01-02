@@ -1,8 +1,5 @@
 import { createWebHistory, type RouterOptions } from 'vue-router';
 
-import HomeView from '@/views/HomeView.vue';
+import fullRoutes from './routes';
 
-export default {
-    history: createWebHistory(),
-    routes: [{ path: '/', component: HomeView }],
-} as RouterOptions;
+export default { history: createWebHistory(), routes: fullRoutes } as RouterOptions;

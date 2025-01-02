@@ -10,7 +10,7 @@ export default tseslint.config(
         files: ['**/*.{js,ts,vue}'],
     },
     {
-        ignores: ['node_modules/', "dist/", ".yarn/", '**/*.mjs', '**/*.cjs', '**/*.config.ts', '**/*.d.ts'],
+        ignores: ['node_modules/', 'dist/', '.yarn/', 'coverage/', '**/*.mjs', '**/*.cjs', '**/*.config.ts', '**/*.d.ts'],
     },
     eslint.configs.recommended,
     tseslint.configs.recommended,
