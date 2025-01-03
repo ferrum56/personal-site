@@ -12,7 +12,7 @@ export default {
     website: {
         title: 'About This Site',
         text: [
-            'A simple, modern, and responsive website built with <|Vue|>, written in modern TypeScript.' +
+            'A simple, modern, and responsive website built with <|Vue|>, written in modern TypeScript. ' +
                 "This is a frontend Node project that uses <|Quasar framework|> for UI because I'm horrible at CSS. :(",
             'Feel free to read more <|about me|>, my <|skill set|>, or my <|projects|>, or contact me <|here|>. ' +
                 'Also check out the <|misc|> page for some interesting stuff.',
