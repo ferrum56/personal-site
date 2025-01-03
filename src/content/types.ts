@@ -1,6 +1,12 @@
-export interface ContentSection {
+export interface TextSectionContent {
     title: string;
-    content: string | string[];
+    text: string | string[];
+    links?: string[];
+}
+
+export interface InTextLink {
+    text: string;
+    url: string;
 }
 
 export interface SocialLink {
