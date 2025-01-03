@@ -1,6 +1,8 @@
+import { format } from 'quasar';
+const { capitalize } = format;
+
 // See https://router.vuejs.org/guide/advanced/lazy-loading.html
 const HomeView = () => import('@/views/HomeView.vue');
-import { capitalize } from '@/utils/string-util';
 
 const fullRoutes = [
     { path: '/', name: 'home', component: HomeView },
