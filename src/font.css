@@ -6,6 +6,26 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('@/assets/fonts/titillium-web-v17-latin-regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    src: url('@/assets/fonts/titillium-web-v17-latin-italic.woff2') format('woff2');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
 .font-nsw {
     font-family: 'Novecento Sans Wide', Inter, sans-serif;
+}
+
+.font-tw {
+    font-family: 'Titillium Web', Inter, sans-serif;
 }
