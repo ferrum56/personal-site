@@ -21,7 +21,7 @@ export default tseslint.config(
         languageOptions: {
             parserOptions: {
                 parser: tseslint.parser,
-            }
+            },
         },
         rules: {
             "vue/first-attribute-linebreak": "off",
@@ -63,6 +63,12 @@ export default tseslint.config(
             "no-empty": "warn",
             "no-unused-vars": "off",
             "@typescript-eslint/no-unused-vars": "warn",
-        }
-    }
+        },
+    },
+    {
+        files: ['**/*.test.ts'],
+        rules: {
+            "@typescript-eslint/no-unused-expressions": "off",
+        },
+    },
 );
