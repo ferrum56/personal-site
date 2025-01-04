@@ -37,7 +37,7 @@ export default tseslint.config(
                 "attribute": 1,
                 "baseIndent": 1,
                 "closeBracket": 0,
-                "alignAttributesVertically": false,
+                "alignAttributesVertically": true,
                 "ignores": [],
             }],
             "vue/html-self-closing": ["error", {
