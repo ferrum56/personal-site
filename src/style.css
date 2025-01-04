@@ -1,17 +1,24 @@
-/*:root {*/
-/*    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
-/*    line-height: 1.5;*/
-/*    font-weight: 400;*/
+:root {
+    --theme-white: #f4f6ff;
+    --theme-warm: #f9f7f7;
+    --theme-cold: #dbe2ef;
+    --theme-yellow: #f3c623;
+    --theme-orange: #eb8317;
+    --theme-cyan: #98ded9;
+    --theme-sky: #3abef9;
+    --theme-blue: #3572ef;
+    --theme-navy: #050c9c;
+    --theme-black: #212121;
 
-/*    color-scheme: light dark;*/
-/*    color: rgba(255, 255, 255, 0.87);*/
-/*    background-color: #242424;*/
-
-/*    font-synthesis: none;*/
-/*    text-rendering: optimizeLegibility;*/
-/*    -webkit-font-smoothing: antialiased;*/
-/*    -moz-osx-font-smoothing: grayscale;*/
-/*}*/
+    line-height: 1.5;
+    color-scheme: light dark;
+    color: var(--theme-black);
+    background-color: var(--theme-warm);
+    font-synthesis: weight;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 /*a {*/
 /*    font-weight: 500;*/
