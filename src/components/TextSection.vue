@@ -25,7 +25,7 @@ onBeforeUpdate(() => linkIndex = 0);
             <p class="font-tw">
                 <template v-for="part in parseCustomToken(paragraph)" :key="part">
                     <template v-if="part.kind === 'text'">{{ part.data }}</template>
-                    <smart-link v-else :link="{ text: part.data, url: content.links[linkIndex++] }" />
+                    <smart-link v-else :link="{ text: part.data, url: content.links?.[linkIndex++] || '#' }" />
                 </template>
             </p>
         </template>
