@@ -7,18 +7,18 @@
 }
 
 @font-face {
-    font-family: 'Titillium Web';
-    src: url('@/assets/fonts/titillium-web-v17-latin-regular.woff2') format('woff2');
-    font-weight: 400;
+    font-family: 'Novecento Sans Wide';
+    src: url('@/assets/fonts/novecento-sans-wide-bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
     font-family: 'Titillium Web';
-    src: url('@/assets/fonts/titillium-web-v17-latin-italic.woff2') format('woff2');
+    src: url('@/assets/fonts/titillium-web-v17-latin-regular.woff2') format('woff2');
     font-weight: 400;
-    font-style: italic;
+    font-style: normal;
     font-display: swap;
 }
 
