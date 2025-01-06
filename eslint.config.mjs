@@ -12,6 +12,14 @@ export default tseslint.config(
     {
         ignores: ['node_modules/', 'dist/', '.yarn/', 'coverage/', '**/*.mjs', '**/*.cjs', '**/*.config.ts', '**/*.d.ts'],
     },
+    {
+        languageOptions: {
+            globals: {
+                __PROJECT_VERSION__: 'readonly',
+                __EO2024__: 'readonly',
+            },
+        },
+    },
     eslint.configs.recommended,
     tseslint.configs.recommended,
     prettierConfig,
