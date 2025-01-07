@@ -3,13 +3,13 @@ import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
-const routeName = computed(() => route.name);
+const routeName = computed(() => typeof route.name === 'string' ? route.name : '');
 </script>
 
 <template>
     <div class="decoration-panel-elem">
         <transition name="side-text" mode="out-in">
-            <div :key="routeName" class="side-decoration font-nsw">{{ routeName?.toUpperCase() || 'HOME' }}</div>
+            <div :key="routeName" class="side-decoration font-nsw">{{ routeName.toUpperCase() || 'HOME' }}</div>
         </transition>
     </div>
 </template>

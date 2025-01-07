@@ -9,6 +9,10 @@ import './style.css';
 import './font.css';
 
 const router = createRouter(routerOptions);
-router.afterEach((to) => (document.title = `${to.name.toUpperCase()} | ALAN ZHENG`));
+router.afterEach((to) => {
+    if (typeof to.name === 'string') {
+        document.title = `${to.name.toUpperCase()} | ALAN ZHENG`;
+    }
+});
 
 createApp(App).use(router).use(Quasar, { plugins: {} }).mount('#app');
