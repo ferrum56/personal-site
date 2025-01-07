@@ -4,11 +4,11 @@
 
 The repository for my personal website. A simple and modern TypeScript Vue-based website.
 
-## Features
+## 🚀 Features
 
 TODO
 
-## Setup
+## 🛠️ Setup
 
 1. Node.js
 
@@ -38,12 +38,12 @@ TODO
     yarn coverage # With istanbul
     ```
 
-## About Fonts and Icons
+## 🔤 About Fonts and Icons
 
 The website uses multiple fonts. *Novecento Sans Wide* is a geometric, all-cap font used as titles and headings. *Titillium Web* is a widely used sans-serif font for body text. *Bender* is an industrial-style font used for numbers.
 
 The icon set used is the free version of *Font Awesome 6* with solid, regular, and brand icons. SVG icons are chosen to enable tree-shaking and reduce bundle size.
 
-## Disclaimer on License
+## ⚠️ Disclaimer on License
 
 The MIT license **only applies to the code** in this repository. All non-code content of the website, including images, texts, and other assets, including but not limited to everything in the `public`, `src/assets`, and `src/content` directories, are **not covered by the MIT license**, and should not be used, reproduced, or distributed without permission. This means they are implicitly copyrighted unless otherwise stated, either in the repository, on the website, or by the respective owners.
