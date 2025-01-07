@@ -1,7 +1,7 @@
 {
   "name": "personal-site",
   "private": true,
-  "version": "0.2.3",
+  "version": "0.2.5",
   "description": "A simple and modern personal site",
   "type": "module",
   "repository": {

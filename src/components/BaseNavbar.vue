@@ -14,12 +14,12 @@ watch(
 </script>
 
 <template>
-    <q-header elevated class="bg-primary text-white q-pa-sm position-sticky">
+    <q-header elevated class="text-white q-pa-sm base-navbar-elem">
         <q-toolbar>
-            <q-avatar>
-                <img src="/vite.svg" alt="ferrum56.com logo" />
-            </q-avatar>
-            <q-btn flat square stretch label="Alan Zheng" class="q-ml-md q-mr-md" to="/" aria-label="Home" />
+            <router-link to="/" class="row items-center q-mr-md navbar-title">
+                <img src="@/assets/vue.svg" alt="Site Logo" />
+                <span class="q-ml-md gt-sm">ALAN ZHENG</span>
+            </router-link>
             <q-separator vertical />
             <q-btn-toggle v-model="routeButton" flat stretch toggle-color="yellow" :options="navRoutes" />
         </q-toolbar>
@@ -27,8 +27,14 @@ watch(
 </template>
 
 <style scoped>
-q-header {
-    top: 0;
-    z-index: 10;
+.base-navbar-elem {
+    background-color: var(--theme-blue);
+}
+
+.navbar-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--theme-white);
+    text-decoration: none;
 }
 </style>
