@@ -1,39 +1,54 @@
-/*:root {*/
-/*    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;*/
-/*    line-height: 1.5;*/
-/*    font-weight: 400;*/
+:root {
+    --theme-white: #f4f6ff;
+    --theme-warm: #f9f7f7;
+    --theme-cold: #dbe2ef;
+    --theme-yellow: #ffff00;
+    --theme-orange: #eb8317;
+    --theme-cyan: #98ded9;
+    --theme-sky: #3abef9;
+    --theme-blue: #3572ef;
+    --theme-navy: #050c9c;
+    --theme-black: #212121;
 
-/*    color-scheme: light dark;*/
-/*    color: rgba(255, 255, 255, 0.87);*/
-/*    background-color: #242424;*/
+    line-height: 1.5;
+    color-scheme: light dark;
+    color: var(--theme-black);
+    background-color: var(--theme-warm);
+    font-synthesis: weight;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
-/*    font-synthesis: none;*/
-/*    text-rendering: optimizeLegibility;*/
-/*    -webkit-font-smoothing: antialiased;*/
-/*    -moz-osx-font-smoothing: grayscale;*/
-/*}*/
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--theme-cyan);
+    background-clip: padding-box;
+    border: solid 3px transparent;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--theme-sky);
+}
 
 /*a {*/
-/*    font-weight: 500;*/
 /*    color: #646cff;*/
-/*    text-decoration: inherit;*/
 /*}*/
 /*a:hover {*/
 /*    color: #535bf2;*/
 /*}*/
 
-/*body {*/
-/*    margin: 0;*/
-/*    display: flex;*/
-/*    place-items: center;*/
-/*    min-width: 320px;*/
-/*    min-height: 100vh;*/
-/*}*/
-
-/*h1 {*/
-/*    font-size: 3.2em;*/
-/*    line-height: 1.1;*/
-/*}*/
+body {
+    min-width: 320px;
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    overscroll-behavior: none;
+}
 
 /*button {*/
 /*    border-radius: 8px;*/
@@ -58,12 +73,10 @@
 /*    padding: 2em;*/
 /*}*/
 
-/*#app {*/
-/*    max-width: 1280px;*/
-/*    margin: 0 auto;*/
-/*    padding: 2rem;*/
-/*    text-align: center;*/
-/*}*/
+#app {
+    max-width: 1280px;
+    margin: 0 auto;
+}
 
 /*@media (prefers-color-scheme: light) {*/
 /*    :root {*/

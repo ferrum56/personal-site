@@ -12,6 +12,14 @@ export default tseslint.config(
     {
         ignores: ['node_modules/', 'dist/', '.yarn/', 'coverage/', '**/*.mjs', '**/*.cjs', '**/*.config.ts', '**/*.d.ts'],
     },
+    {
+        languageOptions: {
+            globals: {
+                __PROJECT_VERSION__: 'readonly',
+                __EO2024__: 'readonly',
+            },
+        },
+    },
     eslint.configs.recommended,
     tseslint.configs.recommended,
     prettierConfig,
@@ -21,7 +29,7 @@ export default tseslint.config(
         languageOptions: {
             parserOptions: {
                 parser: tseslint.parser,
-            }
+            },
         },
         rules: {
             "vue/first-attribute-linebreak": "off",
@@ -37,7 +45,7 @@ export default tseslint.config(
                 "attribute": 1,
                 "baseIndent": 1,
                 "closeBracket": 0,
-                "alignAttributesVertically": false,
+                "alignAttributesVertically": true,
                 "ignores": [],
             }],
             "vue/html-self-closing": ["error", {
@@ -63,6 +71,12 @@ export default tseslint.config(
             "no-empty": "warn",
             "no-unused-vars": "off",
             "@typescript-eslint/no-unused-vars": "warn",
-        }
-    }
+        },
+    },
+    {
+        files: ['**/*.test.ts'],
+        rules: {
+            "@typescript-eslint/no-unused-expressions": "off",
+        },
+    },
 );
