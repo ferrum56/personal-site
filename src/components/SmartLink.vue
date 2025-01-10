@@ -2,16 +2,16 @@
 import { openURL } from 'quasar';
 
 import { isExternalLink } from '@/utils/string-util';
-import type { InTextLink } from '@/content/types';
+import type { TextLink } from '@/content/types';
 
 defineProps<{
-    link: InTextLink;
+    to: TextLink;
 }>();
 </script>
 
 <template>
-    <a v-if="isExternalLink(link.url)" :href="link.url" @click.prevent="openURL(link.url)">{{ link.text }}</a>
-    <router-link v-else :to="link.url">{{ link.text }}</router-link>
+    <a v-if="isExternalLink(to.url)" :href="to.url" @click.prevent="openURL(to.url)">{{ to.description }}</a>
+    <router-link v-else :to="to.url">{{ to.description }}</router-link>
 </template>
 
 <style scoped>
