@@ -17,10 +17,17 @@ defineProps<{
             </template>
         </p>
     </template>
+    <q-btn v-if="content.button" v-bind="content.button" :target="content.button.href ? '_blank' : '_self'"
+           class="font-nsw text-content-btn" />
 </template>
 
 <style scoped>
 p {
     font-size: 1rem;
+}
+
+.text-content-btn {
+    color: var(--theme-sky);
+    border-color: var(--theme-sky);
 }
 </style>
