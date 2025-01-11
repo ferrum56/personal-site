@@ -2,8 +2,8 @@
 import { onMounted, onUnmounted, ref } from 'vue';
 import { debounce } from 'quasar';
 
-import BaseNavbar from '@/components/BaseNavbar.vue';
-import BaseFooter from '@/components/BaseFooter.vue';
+import BasicNavbar from '@/components/BasicNavbar.vue';
+import BasicFooter from '@/components/BasicFooter.vue';
 import DecorationPanel from '@/components/DecorationPanel.vue';
 
 const leftPanelOpen = ref(false);
@@ -16,7 +16,7 @@ onUnmounted(() => window.removeEventListener('resize', toggleLeftPanel));
 
 <template>
     <q-layout view="hHh lpR fff">
-        <base-navbar class="font-nsw" />
+        <basic-navbar class="font-nsw" />
         <q-drawer v-model="leftPanelOpen" :width="100" show-if-above :breakpoint="500" side="left" draggable="false"
                   no-swipe-open no-swipe-close no-swipe-backdrop>
             <decoration-panel />
@@ -24,7 +24,7 @@ onUnmounted(() => window.removeEventListener('resize', toggleLeftPanel));
         <q-page-container>
             <router-view />
         </q-page-container>
-        <base-footer />
+        <basic-footer />
     </q-layout>
 </template>
 
