@@ -6,14 +6,14 @@ const verLocal = __PROJECT_VERSION__;
 
 <template>
     <q-footer class="base-footer-elem">
-        <div class="row justify-start items-center q-mt-sm">
-            <q-btn v-for="link in socialLinks" :key="link.name" :icon="link.icon" :href="link.url" target="_blank"
-                   flat dense round class="q-mx-xs" aria-label="link.name" />
+        <div class="q-mt-sm row justify-start items-center">
+            <q-btn v-for="link in socialLinks" :key="link.name" :href="link.href" :icon="link.icon"
+                   :aria-label="link.name" target="_blank" flat dense round class="q-mx-xs" />
         </div>
-        <div class="q-mt-sm q-mb-md q-mx-sm font-nsw all-caps footer-copyright">
+        <div class="q-mx-sm q-mt-sm q-mb-md text-weight-light text-uppercase font-nsw footer-copyright">
             © Alan Zheng. All Rights Reserved.
         </div>
-        <div class="font-b ver-decoration">APP VER {{ verLocal || '0' }}</div>
+        <div class="absolute text-weight-light text-right font-b ver-decoration">APP VER {{ verLocal || '0' }}</div>
     </q-footer>
 </template>
 
@@ -25,17 +25,13 @@ const verLocal = __PROJECT_VERSION__;
 
 .footer-copyright {
     font-size: 0.5rem;
-    font-weight: 300;
 }
 
 .ver-decoration {
-    position: absolute;
     bottom: 10px;
     right: 20px;
     width: 30%;
     font-size: 0.5rem;
-    font-weight: 300;
-    text-align: right;
 }
 
 .ver-decoration::before {

@@ -20,7 +20,7 @@ function getComponentType(item: SectionItem): Component | string {
 </script>
 
 <template>
-    <div class="relative-position q-px-lg q-py-md bg-theme-white section-border">
+    <div class="relative-position q-mt-xl q-px-lg q-py-md bg-theme-white section-border">
         <h5 class="q-my-md text-weight-bold text-uppercase font-nsw">{{ sectionTemplate.title }}</h5>
         <hr />
         <template v-for="item in sectionTemplate.items" :key="item">
