@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { toQIcon } from '@/utils/icon-util';
-import { isString, isExternalLink, parseRichText } from '@/utils/string-util';
+import { isExternalLink, parseRichText } from '@/utils/string-util';
 
 describe('Icon Util', () => {
     it('should have correct behaviour: toQIcon', async () => {

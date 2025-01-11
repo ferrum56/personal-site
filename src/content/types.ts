@@ -11,7 +11,7 @@ export interface TextLink {
  * If `icon` is provided, make sure to convert it to a valid name using `toQIcon`.
  */
 export interface ButtonLink {
-    label: string;
+    label?: string;
     to?: string;
     href?: string;
     icon?: string;
