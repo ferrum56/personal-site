@@ -1,27 +1,35 @@
-export interface CustomTokenPart {
-    kind: 'text' | 'link';
-    data: string;
+import { type RichTextPart, isRichTextPartType } from '@/content/types';
+
+/**
+ * Checks if a URL is an external link, i.e. it starts with `http`.
+ * @param url - The full URL.
+ */
+export function isExternalLink(url: string): boolean {
+    return url.startsWith('http');
 }
 
-export function isString(value: unknown): value is string {
-    return typeof value === 'string';
-}
+/**
+ * Parses a rich text string into an array of plain text and processed rich text parts.
+ * @param text - The raw rich text string to parse.
+ */
+export function parseRichText(text: string): RichTextPart[] {
+    const matches = text.matchAll(/\{(.+?)}/g);
+    const parts: RichTextPart[] = [];
 
-export function isExternalLink(link: string): boolean {
-    return link.startsWith('http');
-}
-
-export function parseCustomToken(str: string): CustomTokenPart[] {
-    const matches = str.matchAll(/<\|([^|]+)\|>/g);
-
-    const parts: CustomTokenPart[] = [];
     let lastIndex = 0;
     for (const match of matches) {
-        parts.push({ kind: 'text', data: str.slice(lastIndex, match.index) });
-        parts.push({ kind: 'link', data: match[1] });
+        parts.push({ type: 'text', data: text.slice(lastIndex, match.index) });
+
+        const placeholder = match[1].split(':');
+        if (isRichTextPartType(placeholder[0])) {
+            parts.push({ type: placeholder[0], data: placeholder[1] });
+        } else {
+            parts.push({ type: 'text', data: match[0] });
+        }
+
         lastIndex = match.index + match[0].length;
     }
-    parts.push({ kind: 'text', data: str.slice(lastIndex) });
+    parts.push({ type: 'text', data: text.slice(lastIndex) });
 
     return parts;
 }
