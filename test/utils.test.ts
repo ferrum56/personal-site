@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 
 import { toQIcon } from '@/utils/icon-util';
-import { isString, isExternalLink, parseCustomToken } from '@/utils/string-util';
+import { isString, isExternalLink, parseRichText } from '@/utils/string-util';
 
 describe('Icon Util', () => {
     it('should have correct behaviour: toQIcon', async () => {
@@ -14,26 +14,27 @@ describe('Icon Util', () => {
 });
 
 describe('String Util', () => {
-    it('should have correct behaviour: isString', async () => {
-        expect(isString).to.be.a('function');
-        expect(isString('test')).to.be.true;
-        expect(isString({ not: 'str' })).to.be.false;
-    });
-
     it('should have correct behaviour: isExternalLink', async () => {
         expect(isExternalLink).to.be.a('function');
         expect(isExternalLink('https://example.com')).to.be.true;
         expect(isExternalLink('example.com')).to.be.false;
     });
 
-    it('should have correct behaviour: parseCustomToken', async () => {
-        expect(parseCustomToken).to.be.a('function');
-        expect(parseCustomToken('Hello, <|world|>!'))
+    it('should have correct behaviour: parseRichText', async () => {
+        expect(parseRichText).to.be.a('function');
+        expect(parseRichText('Hello, {link:world}!'))
             .to.be.an('array')
             .and.deep.equal([
-                { kind: 'text', data: 'Hello, ' },
-                { kind: 'link', data: 'world' },
-                { kind: 'text', data: '!' },
+                { type: 'text', data: 'Hello, ' },
+                { type: 'link', data: 'world' },
+                { type: 'text', data: '!' },
+            ]);
+        expect(parseRichText('Hello, {wrong:world}!'))
+            .to.be.an('array')
+            .and.deep.equal([
+                { type: 'text', data: 'Hello, ' },
+                { type: 'text', data: '{wrong:world}' },
+                { type: 'text', data: '!' },
             ]);
     });
 });

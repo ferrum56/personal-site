@@ -18,7 +18,7 @@ defineProps<{
         </p>
     </template>
     <q-btn v-if="content.button" v-bind="content.button" :target="content.button.href ? '_blank' : '_self'"
-           class="font-nsw text-content-btn" />
+           outline square class="font-nsw text-content-btn" />
 </template>
 
 <style scoped>
