@@ -3053,7 +3053,7 @@ __metadata:
     husky: "npm:^9.1.7"
     lint-staged: "npm:^15.3.0"
     prettier: "npm:^3.4.2"
-    quasar: "npm:^2.17.5"
+    quasar: "npm:^2.17.7"
     typescript: "npm:~5.7.2"
     typescript-eslint: "npm:^8.19.0"
     vite: "npm:^6.0.5"
@@ -3148,10 +3148,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"quasar@npm:^2.17.5":
-  version: 2.17.5
-  resolution: "quasar@npm:2.17.5"
-  checksum: 10c0/00eed2ebcbf9d72d6e9e5a97742000ab6364e6e256834f50036d4ac88e5bb4c67345a5cbc3280d747eec288e21f289c3a9ba13ea616e3ed4f1a7f4d9b101483c
+"quasar@npm:^2.17.7":
+  version: 2.17.7
+  resolution: "quasar@npm:2.17.7"
+  checksum: 10c0/a331f9615b93fbb674d2b0f0fa6c9aac08d47e80219b0bb9035414358a43fe4c55ce6b354c86314a1efc6310edb0beaa8aef490ceb698f3148ffb7ef0c6c3433
   languageName: node
   linkType: hard
 
