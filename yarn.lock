@@ -645,15 +645,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@quasar/vite-plugin@npm:^1.8.1":
-  version: 1.8.1
-  resolution: "@quasar/vite-plugin@npm:1.8.1"
+"@quasar/vite-plugin@npm:^1.9.0":
+  version: 1.9.0
+  resolution: "@quasar/vite-plugin@npm:1.9.0"
   peerDependencies:
     "@vitejs/plugin-vue": ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0
     quasar: ^2.16.0
-    vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0-beta.9
+    vite: ^2.0.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0
     vue: ^3.0.0
-  checksum: 10c0/c7e8a81af7a49464eac728b3483966bf5375a904e2d0ef2a7ea156db417ed08eef654cf4bdb256aa1f59d1986c0795e420cd704d0b55bd98829be2bc72b5558c
+  checksum: 10c0/dbcc1a874be0a86314d738f661acaff39bcd6fb129dba00d90f904b00f252c23246ab25e5ac10cfdd73abb320b2357d2af08d48c6f0d503a2400f4816ff1b45d
   languageName: node
   linkType: hard
 
@@ -3042,7 +3042,7 @@ __metadata:
     "@fortawesome/free-brands-svg-icons": "npm:^6.7.2"
     "@fortawesome/free-regular-svg-icons": "npm:^6.7.2"
     "@fortawesome/free-solid-svg-icons": "npm:^6.7.2"
-    "@quasar/vite-plugin": "npm:^1.8.1"
+    "@quasar/vite-plugin": "npm:^1.9.0"
     "@types/node": "npm:^22.10.3"
     "@vitejs/plugin-vue": "npm:^5.2.1"
     "@vitest/coverage-istanbul": "npm:^3.0.4"
