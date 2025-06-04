@@ -12,13 +12,13 @@ TODO
 
 1. Node.js
 
-    Use *Node 20* or above. (Node 18 should work but no guarantee)
+    Use *Node 20* or above.
 2. Package Manager
 
-    Use *Yarn 4* with `corepack`. If not using `corepack`, delete the `packageManager` field in `package.json`.
+    Use *Yarn 4* with `corepack`.
     ```bash
     corepack enable
-    yarn set version stable
+    yarn set version berry
     ```
 3. Install dependencies
 

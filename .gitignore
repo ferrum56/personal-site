@@ -91,10 +91,6 @@ coverage
 .idea/$CACHE_FILE$
 
 
-### Vercel ###
-.vercel
-
-
 ### Other ###
 # Editor directories and files
 .vscode/*
