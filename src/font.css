@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 @font-face {
     font-family: 'Novecento Sans Wide';
     src: url('@/assets/fonts/novecento-sans-wide-normal.woff2') format('woff2');
