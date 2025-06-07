@@ -1,5 +1,16 @@
-import { createWebHistory, type RouterOptions } from 'vue-router';
+import { createRouter, createWebHistory } from 'vue-router';
 
-import fullRoutes from './routes';
+import { routes } from './routes';
+import { capitalize } from '@/utils/string-util';
 
-export default { history: createWebHistory(), routes: fullRoutes } as RouterOptions;
+const router = createRouter({
+    history: createWebHistory(),
+    routes: routes,
+});
+router.afterEach((to) => {
+    if (typeof to.name === 'string') {
+        document.title = `${capitalize(to.name)} | Alan Zheng`;
+    }
+});
+
+export { router };

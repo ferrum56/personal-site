@@ -1,11 +1,10 @@
-import { format } from 'quasar';
-const { capitalize } = format;
+import type { RouteRecordRaw } from 'vue-router';
 
 // See https://router.vuejs.org/guide/advanced/lazy-loading.html
 const HomeView = () => import('@/views/HomeView.vue');
 const AboutView = () => import('@/views/AboutView.vue');
 
-const fullRoutes = [
+export const routes: Readonly<RouteRecordRaw[]> = [
     { path: '/', name: 'home', component: HomeView },
     { path: '/about', name: 'about', component: AboutView },
     { path: '/skills', name: 'skills', component: HomeView },
@@ -13,10 +12,3 @@ const fullRoutes = [
     { path: '/misc', name: 'miscellaneous', component: HomeView },
     { path: '/contact', name: 'contact', component: HomeView },
 ];
-
-export const navRoutes = fullRoutes.map(({ path, name }) => ({
-    value: name,
-    to: path,
-    label: capitalize(name),
-}));
-export default fullRoutes;
