@@ -16,14 +16,12 @@ defineProps<{
 @reference "@/style.css";
 
 .inline-link {
-    @apply relative no-underline text-ri-glow1 hover:text-ri-glow2;
-    padding-bottom: 2px;
+    @apply relative pb-px no-underline text-ri-glow1 hover:text-ri-glow2;
 }
 
 .inline-link::after {
-    @apply absolute left-0 bottom-0 w-0 bg-ri-glow1;
+    @apply absolute left-0 bottom-0 w-0 h-px bg-ri-glow1;
     content: "";
-    height: 1px;
     transition: width 0.3s;
 }
 
