@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-    <BaseLink :to="to" :label="label" class="text-link" />
+    <BaseLink :to="to" class="text-link">{{ label }}</BaseLink>
 </template>
 
 <style scoped>

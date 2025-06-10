@@ -3,13 +3,16 @@ import { isExternalUrl } from '@/utils/string-util';
 
 defineProps<{
     to: string;
-    label: string;
 }>();
 </script>
 
 <template>
     <span class="no-underline">
-        <a v-if="isExternalUrl(to)" :href="to" target="_blank">{{ label }}</a>
-        <RouterLink v-else :to="to">{{ label }}</RouterLink>
+        <a v-if="isExternalUrl(to)" :href="to" target="_blank">
+            <slot>{{ to }}</slot>
+        </a>
+        <RouterLink v-else :to="to">
+            <slot>{{ to }}</slot>
+        </RouterLink>
     </span>
 </template>
