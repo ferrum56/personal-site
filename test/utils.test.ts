@@ -1,40 +1,74 @@
 import { describe, expect, it } from 'vitest';
 
-import { toQIcon } from '@/utils/icon-util';
-import { isExternalLink, parseRichText } from '@/utils/string-util';
+import { parseText } from '@/utils/content-util';
+import { capitalize, fnv1a32, isExternalUrl } from '@/utils/string-util';
 
-describe('Icon Util', () => {
-    it('should have correct behaviour: toQIcon', async () => {
-        expect(toQIcon).to.be.a('function');
-        expect(() => toQIcon('not icon')).to.throw(TypeError);
-        expect(toQIcon({ icon: [24, 24, [], 'f000', 'f001'] }))
-            .to.be.a('string')
-            .and.equal('f001|0 0 24 24');
+describe('utils::content-util', () => {
+    it('parseText has correct behaviour', async () => {
+        expect(parseText).to.be.a('function');
+        expect(parseText('Hello, {link|world|/}!'))
+            .to.be.an('array')
+            .and.deep.equal([
+                { type: 'text', text: 'Hello, ' },
+                { type: 'link', text: 'world', to: '/' },
+                { type: 'text', text: '!' },
+            ]);
+        expect(parseText('Hello, {link}!'))
+            .to.be.an('array')
+            .and.deep.equal([
+                { type: 'text', text: 'Hello, ' },
+                { type: 'text', text: '{link}' },
+                { type: 'text', text: '!' },
+            ]);
+        expect(parseText('Hello, {link|world}!'))
+            .to.be.an('array')
+            .and.deep.equal([
+                { type: 'text', text: 'Hello, ' },
+                { type: 'link', text: 'world' },
+                { type: 'text', text: '!' },
+            ]);
+        expect(parseText('Hello, {wrong|world}!'))
+            .to.be.an('array')
+            .and.deep.equal([
+                { type: 'text', text: 'Hello, ' },
+                { type: 'text', text: '{wrong|world}' },
+                { type: 'text', text: '!' },
+            ]);
+        expect(parseText('Hello, {redact|world}!'))
+            .to.be.an('array')
+            .and.deep.equal([
+                { type: 'text', text: 'Hello, ' },
+                { type: 'redact', text: '\u25a0\u25a0' },
+                { type: 'text', text: '!' },
+            ]);
+        expect(parseText('Hello, {redact|worlds}!'))
+            .to.be.an('array')
+            .and.deep.equal([
+                { type: 'text', text: 'Hello, ' },
+                { type: 'redact', text: '\u25a0\u25a0\u25a0' },
+                { type: 'text', text: '!' },
+            ]);
     });
 });
 
-describe('String Util', () => {
-    it('should have correct behaviour: isExternalLink', async () => {
-        expect(isExternalLink).to.be.a('function');
-        expect(isExternalLink('https://example.com')).to.be.true;
-        expect(isExternalLink('example.com')).to.be.false;
+describe('utils::string-util', () => {
+    it('capitalize has correct behaviour', async () => {
+        expect(capitalize).to.be.a('function');
+        expect(capitalize('hello')).to.be.a('string').and.equal('Hello');
+        expect(capitalize('Hello')).to.be.a('string').and.equal('Hello');
+        expect(capitalize('')).to.be.a('string').and.equal('');
     });
 
-    it('should have correct behaviour: parseRichText', async () => {
-        expect(parseRichText).to.be.a('function');
-        expect(parseRichText('Hello, {link:world}!'))
-            .to.be.an('array')
-            .and.deep.equal([
-                { type: 'text', data: 'Hello, ' },
-                { type: 'link', data: 'world' },
-                { type: 'text', data: '!' },
-            ]);
-        expect(parseRichText('Hello, {wrong:world}!'))
-            .to.be.an('array')
-            .and.deep.equal([
-                { type: 'text', data: 'Hello, ' },
-                { type: 'text', data: '{wrong:world}' },
-                { type: 'text', data: '!' },
-            ]);
+    it('fnv1a32 correctly implements FNV-1a hash (32-bit, UTF-8)', async () => {
+        expect(fnv1a32).to.be.a('function');
+        expect(fnv1a32('')).to.be.a('number').and.equal(0x811c9dc5);
+        expect(fnv1a32('hello')).to.be.a('number').and.equal(0x4f9f2cab);
+        expect(fnv1a32('TypeScript')).to.be.a('number').and.equal(0x134d16e2);
+    });
+
+    it('isExternalUrl has correct behaviour', async () => {
+        expect(isExternalUrl).to.be.a('function');
+        expect(isExternalUrl('https://example.com')).to.be.true;
+        expect(isExternalUrl('example.com')).to.be.false;
     });
 });
