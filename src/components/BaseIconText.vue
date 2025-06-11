@@ -6,13 +6,9 @@ defineProps<{
     label?: string;
     icon?: IconDefinition;
 }>();
-
-defineOptions({
-    inheritAttrs: false,
-});
 </script>
 
 <template>
-    <FontAwesomeIcon v-if="icon" :icon="icon" class="mr-2" />
-    <span v-if="label" class="font-title uppercase tracking-wider">{{ label }}</span>
+    <FontAwesomeIcon v-if="icon" :icon="icon" :class="label ? 'mr-2' : ''" />
+    <span v-if="label" v-bind="$attrs">{{ label }}</span>
 </template>

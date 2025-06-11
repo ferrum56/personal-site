@@ -2,7 +2,7 @@
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 import BaseLink from './BaseLink.vue';
-import BaseButton from './BaseButton.vue';
+import BaseIconText from './BaseIconText.vue';
 
 defineProps<{
     to: string;
@@ -13,7 +13,7 @@ defineProps<{
 
 <template>
     <BaseLink :to="to" class="relative px-10 btn">
-        <BaseButton :label="label" :icon="icon" />
+        <BaseIconText :label="label" :icon="icon" class="font-title uppercase tracking-wide" />
     </BaseLink>
 </template>
 
