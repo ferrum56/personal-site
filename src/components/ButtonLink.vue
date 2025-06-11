@@ -18,15 +18,14 @@ defineProps<{
 </template>
 
 <style scoped>
+@reference "@/style.css";
+
 .btn::after {
-    @apply absolute opacity-0;
+    @apply absolute right-2 opacity-0 transition-all duration-500 ease-initial;
     content: "\2192";
-    right: 10px;
-    transition: all 0.5s;
 }
 
 .btn:hover::after {
-    @apply opacity-100;
-    right: 15px;
+    @apply right-4 opacity-100;
 }
 </style>

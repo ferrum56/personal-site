@@ -1,4 +1,5 @@
 export interface TextData {
+    id: number;
     title: string;
     text: string[];
 }
