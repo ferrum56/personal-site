@@ -3,9 +3,16 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 defineProps<{
-    label?: string;
+    label: string;
     icon?: IconDefinition;
+} | {
+    icon: IconDefinition;
+    label?: string;
 }>();
+
+defineOptions({
+    inheritAttrs: false,
+});
 </script>
 
 <template>
