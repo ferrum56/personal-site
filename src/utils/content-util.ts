@@ -12,6 +12,7 @@ interface TextChunk {
     type: ChunkType;
     text: string;
     to?: string;
+    length?: number;
 }
 
 function isChunkType(value: unknown): value is ChunkType {
@@ -31,7 +32,11 @@ export function parseText(text: string): TextChunk[] {
             if (enclosed[0] === 'link' && enclosed.length === 3) {
                 chunks.push({ type: 'link', text: enclosed[1], to: enclosed[2] });
             } else if (enclosed[0] === 'redact') {
-                chunks.push({ type: 'redact', text: '\u25a0'.repeat(enclosed[1].length / 2) });
+                chunks.push({
+                    type: 'redact',
+                    text: enclosed[1],
+                    length: enclosed[2] || enclosed[1].length / 2,
+                });
             } else {
                 chunks.push({ type: enclosed[0], text: enclosed[1] });
             }
