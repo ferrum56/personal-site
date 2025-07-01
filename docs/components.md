@@ -135,5 +135,5 @@ A section component designed to render different types of content and an optiona
 The universal footer of this website. Do not, under any circumstances, style or extend this component. It is designed to be used as-is.
 
 #### Status
-- [ ] Done
+- [x] Done
 - [ ] No further work needed

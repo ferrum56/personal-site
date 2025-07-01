@@ -17,7 +17,7 @@ defineProps<{
 </script>
 
 <template>
-    <BaseLink :to="to" :class="label ? 'btn-link-text' : 'btn-link-icon'" class="relative btn" public>
+    <BaseLink :to="to" :public="public" :class="label ? 'btn-link-text' : 'btn-link-icon'" class="relative btn">
         <BaseIconText :label="label" :icon="icon" class="font-title uppercase tracking-wide" />
     </BaseLink>
 </template>

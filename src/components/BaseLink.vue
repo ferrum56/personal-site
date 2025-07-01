@@ -3,7 +3,7 @@ import { isExternalUrl } from '@/utils/string-util';
 
 defineProps<{
     to: string;
-    public: boolean;
+    public?: boolean;
 }>();
 </script>
 
