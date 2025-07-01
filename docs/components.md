@@ -70,6 +70,21 @@ Derived from `BaseLink` and `BaseIconText`, renders a link that looks like a but
 
 ---
 
+### `NavLink`
+
+#### Overview
+A component specifically used to render a router link for navigation, within a navigation menu. Further styling of this component is discouraged.
+
+#### Status
+- [x] Done
+- [ ] No further work needed
+
+#### Props
+- `to: string` — The destination URL, must be an in-app route
+- `label: string` — The page name
+
+---
+
 ### `TextLine`
 
 #### Overview
@@ -126,6 +141,17 @@ A section component designed to render different types of content and an optiona
 - `title` — Title of the section, must be a `ContentSectionTitle`
 - `content` — Main content of the section, must be one of the components ending with `Content`, such as `TextContent`
 - `default` — Anything else to append to the end of the section
+
+---
+
+### `AppHeader`
+
+#### Overview
+The universal header of this website, used for navigation purposes. Do not, under any circumstances, style or extend this component. It is designed to be used as-is.
+
+#### Status
+- [ ] Done
+- [ ] No further work needed
 
 ---
 
