@@ -4,11 +4,12 @@ import BaseLink from './BaseLink.vue';
 defineProps<{
     to: string;
     label: string;
+    public?: boolean;
 }>();
 </script>
 
 <template>
-    <BaseLink :to="to" class="text-link">{{ label }}</BaseLink>
+    <BaseLink :to="to" class="text-link" public>{{ label }}</BaseLink>
 </template>
 
 <style scoped>

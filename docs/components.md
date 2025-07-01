@@ -30,6 +30,7 @@ A basic component with either an anchor or a `RouterLink` directly at the root, 
 
 #### Props
 - `to: string` — Destination URL or route, also used to determine the tag to render
+- `public: boolean` — If true, anchor tag will be enforced
 
 #### Slots
 - `default` — Content to be rendered inside the link, can be anything that makes sense
@@ -48,6 +49,7 @@ Derived from `BaseLink`, this is a styled label-only link used within a block of
 #### Props
 - `to: string` — Required by `BaseLink` props
 - `label: string` — Required by `BaseLink` slot
+- `public: boolean` — Required by `BaseLink` props
 
 ---
 
@@ -62,6 +64,7 @@ Derived from `BaseLink` and `BaseIconText`, renders a link that looks like a but
 
 #### Props
 - `to: string` — Required by `BaseLink` props
+- `public: boolean` — Required by `BaseLink` props
 - `label: string` — Required by `BaseIconText` props
 - `icon: IconDefinition` — Required by `BaseIconText` props
 
@@ -123,3 +126,14 @@ A section component designed to render different types of content and an optiona
 - `title` — Title of the section, must be a `ContentSectionTitle`
 - `content` — Main content of the section, must be one of the components ending with `Content`, such as `TextContent`
 - `default` — Anything else to append to the end of the section
+
+---
+
+### `AppFooter`
+
+#### Overview
+The universal footer of this website. Do not, under any circumstances, style or extend this component. It is designed to be used as-is.
+
+#### Status
+- [ ] Done
+- [ ] No further work needed

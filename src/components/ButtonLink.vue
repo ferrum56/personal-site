@@ -6,6 +6,7 @@ import BaseIconText from './BaseIconText.vue';
 
 defineProps<{
     to: string;
+    public?: boolean;
 } & ({
     label: string;
     icon?: IconDefinition;
@@ -16,7 +17,7 @@ defineProps<{
 </script>
 
 <template>
-    <BaseLink :to="to" :class="label ? 'btn-link-text' : 'btn-link-icon'" class="relative btn">
+    <BaseLink :to="to" :class="label ? 'btn-link-text' : 'btn-link-icon'" class="relative btn" public>
         <BaseIconText :label="label" :icon="icon" class="font-title uppercase tracking-wide" />
     </BaseLink>
 </template>
