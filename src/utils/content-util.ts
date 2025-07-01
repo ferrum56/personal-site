@@ -35,7 +35,7 @@ export function parseText(text: string): TextChunk[] {
                 chunks.push({
                     type: 'redact',
                     text: enclosed[1],
-                    length: enclosed[2] || enclosed[1].length / 2,
+                    length: parseInt(enclosed[2]) || Math.trunc(enclosed[1].length / 2),
                 });
             } else {
                 chunks.push({ type: enclosed[0], text: enclosed[1] });

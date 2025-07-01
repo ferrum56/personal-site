@@ -38,14 +38,21 @@ describe('utils::content-util', () => {
             .to.be.an('array')
             .and.deep.equal([
                 { type: 'text', text: 'Hello, ' },
-                { type: 'redact', text: '\u25a0\u25a0' },
+                { type: 'redact', text: 'world', length: 2 },
                 { type: 'text', text: '!' },
             ]);
         expect(parseText('Hello, {redact|worlds}!'))
             .to.be.an('array')
             .and.deep.equal([
                 { type: 'text', text: 'Hello, ' },
-                { type: 'redact', text: '\u25a0\u25a0\u25a0' },
+                { type: 'redact', text: 'worlds', length: 3 },
+                { type: 'text', text: '!' },
+            ]);
+        expect(parseText('Hello, {redact|2025|4}!'))
+            .to.be.an('array')
+            .and.deep.equal([
+                { type: 'text', text: 'Hello, ' },
+                { type: 'redact', text: '2025', length: 4 },
                 { type: 'text', text: '!' },
             ]);
     });
