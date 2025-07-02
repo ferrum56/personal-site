@@ -85,6 +85,24 @@ A component specifically used to render a router link for navigation, within a n
 
 ---
 
+### `FlexBadge`
+
+#### Overview
+Derived from `BaseIconText`, this is a mostly un-styled badge component that can be used to display an inline label icon combo, with optional additional content.
+
+#### Status
+- [x] Done
+- [x] No further work needed
+
+#### Props
+- `label: string` — Required by `BaseIconText` props
+- `icon: IconDefinition` — Required by `BaseIconText` props
+
+#### Slots
+- `default` — Additional content to be rendered inside the badge, such as a button
+
+---
+
 ### `TextLine`
 
 #### Overview
