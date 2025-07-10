@@ -3,7 +3,7 @@ import { NavigationMenuItem, NavigationMenuLink, NavigationMenuList, NavigationM
 
 import NavLink from './NavLink.vue';
 import { routes } from '@/router/routes';
-import LogoNav from '@/assets/logo-nav.svg';
+import LogoSimple from '@/assets/logo-simple.svg';
 </script>
 
 <template>
@@ -13,12 +13,13 @@ import LogoNav from '@/assets/logo-nav.svg';
                 <NavigationMenuItem>
                     <NavigationMenuLink as-child>
                         <RouterLink to="/">
-                            <LogoNav class="size-16" />
+                            <LogoSimple class="size-16" />
                         </RouterLink>
                     </NavigationMenuLink>
                 </NavigationMenuItem>
                 <Separator orientation="vertical" />
-                <NavLink v-for="route in routes.slice(1, 6)" :key="route.name" :to="route.path" :label="route.name" />
+                <NavLink v-for="route in routes.slice(1, 6)" :key="route.name" :to="route.path"
+                         :label="route.meta.title" />
             </NavigationMenuList>
         </NavigationMenuRoot>
     </header>
