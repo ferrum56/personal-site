@@ -181,3 +181,14 @@ The universal footer of this website. Do not, under any circumstances, style or 
 #### Status
 - [x] Done
 - [ ] No further work needed
+
+---
+
+### `AppPanel`
+
+#### Overview
+The universal decoration panel of this website. This background decoration has a z-index of 1. Do not, under any circumstances, style or extend this component. It is designed to be used as-is.
+
+#### Status
+- [x] Done
+- [x] No further work needed

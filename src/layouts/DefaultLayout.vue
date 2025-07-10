@@ -19,6 +19,6 @@ const route = useRoute();
 
 <style scoped>
 .default-main {
-    margin-left: 100px;
+    margin-left: 80px;
 }
 </style>
