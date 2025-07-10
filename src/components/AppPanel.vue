@@ -16,7 +16,7 @@ const route = useRoute();
 @reference "@/font.css";
 
 .app-panel {
-    @apply hidden lg:flex fixed z-1;
+    @apply hidden lg:flex fixed -z-1;
     width: 80px;
 }
 
@@ -26,7 +26,7 @@ const route = useRoute();
     letter-spacing: -0.4rem;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    background-size: .2rem .2rem;
+    background-size: 0.2rem 0.2rem;
     background-image: linear-gradient(
         45deg,
         transparent,
