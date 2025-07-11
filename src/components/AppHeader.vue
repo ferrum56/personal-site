@@ -19,7 +19,7 @@ import LogoSimple from '@/assets/logo-simple.svg';
                 </NavigationMenuItem>
                 <Separator orientation="vertical" />
                 <NavLink v-for="route in routes.slice(1, 6)" :key="route.name" :to="route.path"
-                         :label="route.meta.title" />
+                         :label="route.meta?.title || 'Page'" />
             </NavigationMenuList>
         </NavigationMenuRoot>
     </header>

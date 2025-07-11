@@ -6,14 +6,10 @@ import BaseIconText from './BaseIconText.vue';
 
 defineProps<{
     to: string;
-    public?: boolean;
-} & ({
-    label: string;
-    icon?: IconDefinition;
-} | {
-    icon: IconDefinition;
     label?: string;
-})>();
+    icon?: IconDefinition;
+    public?: boolean;
+}>();
 </script>
 
 <template>

@@ -1,7 +1,7 @@
 /// <reference types="vitest/config" />
 import { fileURLToPath, URL } from 'node:url';
 
-import { defineConfig, type PluginOption } from 'vite';
+import { defineConfig, type PluginOption, type UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import tailwindcss from '@tailwindcss/vite';
 import svgLoader from 'vite-svg-loader';
@@ -35,4 +35,4 @@ export default defineConfig({
             provider: 'istanbul',
         },
     },
-});
+} as UserConfig);

@@ -4,11 +4,8 @@ import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import BaseIconText from './BaseIconText.vue';
 
 defineProps<{
-    label: string;
-    icon?: IconDefinition;
-} | {
-    icon: IconDefinition;
     label?: string;
+    icon?: IconDefinition;
 }>();
 </script>
 

@@ -3,11 +3,8 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 defineProps<{
-    label: string;
-    icon?: IconDefinition;
-} | {
-    icon: IconDefinition;
     label?: string;
+    icon?: IconDefinition;
 }>();
 
 defineOptions({
