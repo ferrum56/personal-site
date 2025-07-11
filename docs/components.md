@@ -85,6 +85,21 @@ A component specifically used to render a router link for navigation, within a n
 
 ---
 
+### `FlexButton`
+
+#### Overview
+Derived from `BaseIconText`, renders a simple un-styled button.
+
+#### Status
+- [ ] Done
+- [ ] No further work needed
+
+#### Props
+- `label: string` — Required by `BaseIconText` props
+- `icon: IconDefinition` — Required by `BaseIconText` props
+
+---
+
 ### `FlexBadge`
 
 #### Overview
@@ -162,6 +177,34 @@ A section component designed to render different types of content and an optiona
 
 ---
 
+### `TextContainer`
+
+#### Overview
+A container component designed to render general text-based content. This component is partially styled, use caution when further styling it.
+
+#### Status
+- [ ] Done
+- [ ] No further work needed
+
+#### Props
+- `title` — Title of the container
+
+#### Slots
+- `default` — Main content assembled from other components
+
+---
+
+### `HomeBanner`
+
+#### Overview
+A banner appearing on the home page for page-entry impressions. Do not, under any circumstances, style or extend this component. It is designed to be used as-is.
+
+#### Status
+- [ ] Done
+- [ ] No further work needed
+
+---
+
 ### `AppHeader`
 
 #### Overview
@@ -187,8 +230,15 @@ The universal footer of this website. Do not, under any circumstances, style or 
 ### `AppPanel`
 
 #### Overview
-The universal decoration panel of this website. This background decoration has a z-index of 1. Do not, under any circumstances, style or extend this component. It is designed to be used as-is.
+The universal decoration panel of this website. This background decoration has a z-index of -1. Do not, under any circumstances, style or extend this component. It is designed to be used as-is.
 
 #### Status
 - [x] Done
 - [x] No further work needed
+
+---
+
+// todo new idea MISC: page load stats
+
+// altair, 113368, 5336, vega, 22449, 61317, 55203, 17378, 29271, pollux, 57632, 57757, 78072, arcturus
+
