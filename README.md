@@ -1,6 +1,10 @@
 # Personal Website
 
-![Node workflow](https://github.com/ferrum56/personal-site/actions/workflows/node-ci.yml/badge.svg)
+![CI workflow](https://github.com/ferrum56/personal-site/actions/workflows/ci.yml/badge.svg)
+![GitHub License](https://img.shields.io/github/license/ferrum56/personal-site)
+![Website deployment](https://img.shields.io/badge/website-online-brightgreen)
+![Project version](https://img.shields.io/github/package-json/v/ferrum56/personal-site)
+![Project status](https://img.shields.io/badge/status-wip-yellow)
 
 The repository for my personal website. A simple and modern TypeScript Vue-based website.
 
