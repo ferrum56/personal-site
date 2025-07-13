@@ -34,6 +34,8 @@ jobs:
           cache: 'yarn'
       - name: Install dependencies
         run: yarn install --immutable
+      - name: Build project
+        run: yarn build
       - name: Generate size report
         run: node scripts/calculate-size.js size-pr.json
       - name: Download size report
