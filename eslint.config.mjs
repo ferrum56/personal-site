@@ -7,11 +7,6 @@ import pluginVue from 'eslint-plugin-vue';
 
 export default tseslint.config(
     {
-        env: {
-            node: true,
-        },
-    },
-    {
         files: ['**/*.{js,ts,vue}'],
     },
     {
@@ -20,6 +15,7 @@ export default tseslint.config(
     {
         languageOptions: {
             globals: {
+                ...globals.node,
                 __PROJECT_VERSION__: 'readonly',
                 __EO2024__: 'readonly',
             },
