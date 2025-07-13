@@ -1,30 +1,56 @@
 <script setup lang="ts">
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faHashtag } from '@fortawesome/free-solid-svg-icons';
 
-import TextSection from '@/components/TextSection.vue';
-import { toQIcon } from '@/utils/icon-util';
-import intro from '@/content/intro';
+import HomeBanner from '@/components/HomeBanner.vue';
+import TextContainer from '@/components/TextContainer.vue';
+import ContentSection from '@/components/ContentSection.vue';
+import ContentSectionTitle from '@/components/ContentSectionTitle.vue';
+import TextContent from '@/components/TextContent.vue';
+import ButtonLink from '@/components/ButtonLink.vue';
+import FlexBadge from '@/components/FlexBadge.vue';
+import type { TextData } from '@/utils/content-util';
+import homeData from '@/assets/content/home.json';
+
+const meData = homeData.data.me as TextData;
+const siteData = homeData.data.site as TextData;
 </script>
 
 <template>
-    <q-page class="q-ma-lg q-px-xl home-view-elem">
-        <text-section :content="intro.person" section-number="001">
-            <q-btn outline square label="Learn More" to="/about" class="font-nsw text-section-btn" />
-        </text-section>
-        <text-section :content="intro.website" section-number="002">
-            <q-btn outline square :icon="toQIcon(faGithub)" label="Check on GitHub"
-                   href="https://github.com/ferrum56/personal-site" target="_blank" class="font-nsw text-section-btn" />
-        </text-section>
-    </q-page>
+    <HomeBanner />
+    <TextContainer title="Brief Introduction" class="intro-container">
+        <ContentSection>
+            <template #title>
+                <ContentSectionTitle :id="meData.id" :title="meData.title" />
+            </template>
+            <template #content>
+                <TextContent :article="meData.text" />
+            </template>
+            <ButtonLink to="/about" label="Learn More" class="mt-3 btn-ri" />
+        </ContentSection>
+        <ContentSection>
+            <template #title>
+                <ContentSectionTitle :id="siteData.id" :title="siteData.title" />
+            </template>
+            <template #content>
+                <TextContent :article="siteData.text" />
+            </template>
+            <div class="flex my-3">
+                <FlexBadge :icon="faHashtag" label="Tech" class="badge-decor" />
+                <FlexBadge :icon="faHashtag" label="Minimalism" class="badge-decor" />
+                <FlexBadge :icon="faHashtag" label="Industrial" class="badge-decor" />
+                <FlexBadge :icon="faHashtag" label="Futurism" class="badge-decor" />
+            </div>
+            <ButtonLink :icon="faGithub" to="https://github.com/ferrum56/personal-site/" label="View on GitHub"
+                        class="btn-ri" />
+        </ContentSection>
+    </TextContainer>
 </template>
 
 <style scoped>
-.home-view-elem {
-    border: dashed 2px lightgrey;
-}
+@reference "@/style.css";
 
-.text-section-btn {
-    color: var(--theme-sky);
-    border-color: var(--theme-sky);
+.intro-container {
+    @apply m-5 lg:ml-[80px] p-10 space-y-5;
 }
 </style>

@@ -1,0 +1,48 @@
+{
+  "id": "sirius",
+  "data": {
+    "basic": {
+      "id": 71681,
+      "name": "Alan Zheng",
+      "specialization": ["Web Development", "Software Engineering", "Machine Learning"]
+    },
+    "objective": {
+      "id": 16537,
+      "title": "Objective Record",
+      "text": [
+        "To leverage my skills in web development and software engineering to create impactful solutions that enhance user experience and drive business success."
+      ]
+    },
+    "history": {
+      "id": 37279
+    },
+    "hobbies": {
+      "id": 19849
+    },
+    "facts": {
+      "id": 96100,
+      "title": "Fun Facts",
+      "items": [
+        "Avid gamer and tech enthusiast",
+        "Enjoys hiking and outdoor adventures",
+        "Passionate about open-source contributions"
+      ]
+    },
+    "education": {
+      "id": 3821,
+      "title": "Education",
+      "items": [
+        "Bachelor of Science in Computer Science, XYZ University, 2023",
+        "Master of Science in Software Engineering, ABC University, 2025"
+      ]
+    },
+    "experience": {
+      "id": 84405,
+      "title": "Professional Experience",
+      "items": [
+        "Software Engineer Intern at Tech Solutions, Summer 2023",
+        "Web Developer at Creative Agency, 2022-2023"
+      ]
+    }
+  }
+}

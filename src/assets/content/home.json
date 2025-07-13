@@ -1,0 +1,19 @@
+{
+  "id": "sol",
+  "data": {
+    "me": {
+      "id": 70890,
+      "title": "About Me",
+      "text": [
+        "Nice to meet you, visitor. My name is Alan, a CS undergrad at {link|UBC|https://www.ubc.ca/}, a software developer with passion, a knowledge seeker and a lifelong learner."
+      ]
+    },
+    "site": {
+      "id": 71683,
+      "title": "About This Site",
+      "text": [
+        "A simple, beautiful, and responsive website built with {link|Vue|https://vuejs.org/} and modern TypeScript. Designed with {link|Tailwind|https://tailwindcss.com/} and {link|Reka UI|https://reka-ui.com/}. Feel free to read my {link|resume|/about}, see my {link|skill set|/skills}, or checkout my {link|projects|/projects}. Explore other pages as well!"
+      ]
+    }
+  }
+}

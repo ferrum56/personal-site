@@ -1,27 +1,19 @@
-export interface CustomTokenPart {
-    kind: 'text' | 'link';
-    data: string;
+export function capitalize(str: string): string {
+    return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-export function isString(value: unknown): value is string {
-    return typeof value === 'string';
-}
+export function fnv1a32(str: string): number {
+    const encoder = new TextEncoder();
+    const encoded = encoder.encode(str);
 
-export function isExternalLink(link: string): boolean {
-    return link.startsWith('http');
-}
-
-export function parseCustomToken(str: string): CustomTokenPart[] {
-    const matches = str.matchAll(/<\|([^|]+)\|>/g);
-
-    const parts: CustomTokenPart[] = [];
-    let lastIndex = 0;
-    for (const match of matches) {
-        parts.push({ kind: 'text', data: str.slice(lastIndex, match.index) });
-        parts.push({ kind: 'link', data: match[1] });
-        lastIndex = match.index + match[0].length;
+    let hash = 0x811c9dc5;
+    for (const char of encoded) {
+        hash ^= char;
+        hash = Math.imul(hash, 0x1000193);
     }
-    parts.push({ kind: 'text', data: str.slice(lastIndex) });
+    return hash >>> 0;
+}
 
-    return parts;
+export function isExternalUrl(url: string): boolean {
+    return url.startsWith('http');
 }

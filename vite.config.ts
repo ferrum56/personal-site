@@ -1,15 +1,23 @@
 /// <reference types="vitest/config" />
 import { fileURLToPath, URL } from 'node:url';
 
-import { defineConfig } from 'vite';
+import { defineConfig, type PluginOption, type UserConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
-import { quasar, transformAssetUrls } from '@quasar/vite-plugin';
+import tailwindcss from '@tailwindcss/vite';
+import svgLoader from 'vite-svg-loader';
+import { visualizer } from 'rollup-plugin-visualizer';
 
 // https://vite.dev/config/
 export default defineConfig({
     plugins: [
-        vue({ template: { transformAssetUrls } }),
-        quasar(),
+        vue(),
+        tailwindcss(),
+        svgLoader(),
+        visualizer({
+            open: true,
+            gzipSize: true,
+            brotliSize: true,
+        }) as PluginOption,
     ],
     define: {
         __PROJECT_VERSION__: JSON.stringify(process.env.npm_package_version),
@@ -27,4 +35,4 @@ export default defineConfig({
             provider: 'istanbul',
         },
     },
-});
+} as UserConfig);

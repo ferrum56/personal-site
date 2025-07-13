@@ -1,3 +1,5 @@
+@import 'tailwindcss';
+
 @font-face {
     font-family: 'Novecento Sans Wide';
     src: url('@/assets/fonts/novecento-sans-wide-normal.woff2') format('woff2');
@@ -30,14 +32,8 @@
     font-display: swap;
 }
 
-.font-nsw {
-    font-family: 'Novecento Sans Wide', Inter, sans-serif;
-}
-
-.font-tw {
-    font-family: 'Titillium Web', Inter, sans-serif;
-}
-
-.font-b {
-    font-family: 'Bender', Inter, sans-serif;
+@theme {
+    --font-title: 'Novecento Sans Wide', Inter, sans-serif;
+    --font-text: 'Titillium Web', Inter, sans-serif;
+    --font-number: 'Bender', Inter, sans-serif;
 }

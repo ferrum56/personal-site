@@ -1,110 +1,68 @@
-:root {
-    --theme-white: #f4f6ff;
-    --theme-warm: #f9f7f7;
-    --theme-cold: #dbe2ef;
-    --theme-yellow: #ffff00;
-    --theme-orange: #eb8317;
-    --theme-cyan: #98ded9;
-    --theme-sky: #3abef9;
-    --theme-blue: #3572ef;
-    --theme-navy: #050c9c;
-    --theme-black: #212121;
+@import 'tailwindcss';
+@reference "./font.css";
 
+@theme {
+    --color-ri-cerulean: #007ba7;
+    --color-ri-glow1: #00a1e0;
+    --color-ri-glow2: #00c8e0;
+    --color-ri-back1: #0f1a20;
+    --color-ri-back2: #1a2e3a;
+    --color-ri-fore: #e0e0e0;
+    --color-ri-warn: #ff6b35;
+    --color-ri-subtext: #a0b2b8;
+    --color-ri-separator: #004d66;
+}
+
+:root {
     line-height: 1.5;
-    color-scheme: light dark;
-    color: var(--theme-black);
-    background-color: var(--theme-warm);
+    color-scheme: dark;
+    color: var(--color-ri-fore);
+    background-color: var(--color-ri-back1);
     font-synthesis: weight;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-::-webkit-scrollbar {
-    width: 12px;
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: var(--theme-cyan);
-    background-clip: padding-box;
-    border: solid 3px transparent;
-    border-radius: 8px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background-color: var(--theme-sky);
-}
-
-/*a {*/
-/*    color: #646cff;*/
-/*}*/
-/*a:hover {*/
-/*    color: #535bf2;*/
-/*}*/
-
 body {
+    @apply flex min-h-screen m-0 overscroll-none;
     min-width: 320px;
-    min-height: 100vh;
-    display: flex;
-    margin: 0;
-    overscroll-behavior: none;
 }
-
-/*button {*/
-/*    border-radius: 8px;*/
-/*    border: 1px solid transparent;*/
-/*    padding: 0.6em 1.2em;*/
-/*    font-size: 1em;*/
-/*    font-weight: 500;*/
-/*    font-family: inherit;*/
-/*    background-color: #1a1a1a;*/
-/*    cursor: pointer;*/
-/*    transition: border-color 0.25s;*/
-/*}*/
-/*button:hover {*/
-/*    border-color: #646cff;*/
-/*}*/
-/*button:focus,*/
-/*button:focus-visible {*/
-/*    outline: 4px auto -webkit-focus-ring-color;*/
-/*}*/
-
-/*.card {*/
-/*    padding: 2em;*/
-/*}*/
 
 #app {
+    @apply w-full mx-auto my-0;
     max-width: 1280px;
-    margin: 0 auto;
 }
 
-/*@media (prefers-color-scheme: light) {*/
-/*    :root {*/
-/*        color: #213547;*/
-/*        background-color: #ffffff;*/
-/*    }*/
-/*    a:hover {*/
-/*        color: #747bff;*/
-/*    }*/
-/*    button {*/
-/*        background-color: #f9f9f9;*/
-/*    }*/
-/*}*/
+.badge {
+    @apply inline-flex items-center text-sm;
+}
 
-/* THIS IS FOR APP.VUE */
-/*.logo {*/
-/*    height: 6em;*/
-/*    padding: 1.5em;*/
-/*    will-change: filter;*/
-/*    transition: filter 300ms;*/
-/*}*/
-/*.logo:hover {*/
-/*    filter: drop-shadow(0 0 2em #646cffaa);*/
-/*}*/
-/*.logo.vue:hover {*/
-/*    filter: drop-shadow(0 0 2em #42b883aa);*/
-/*}*/
+.badge-decor {
+    @apply px-2 py-1 font-number rounded-full;
+}
 
-.all-caps {
-    text-transform: uppercase;
+.btn {
+    @apply inline-flex items-center justify-center;
+}
+
+.btn-ri {
+    @apply relative py-2 text-ri-fore bg-ri-back1/70 border border-solid border-ri-cerulean;
+}
+
+.btn-ri:hover {
+    box-shadow: 0 0 15px rgba(0, 200, 224, 0.5);
+    text-shadow: 0 0 5px #00c8e0;
+}
+
+.btn-ri::before {
+    @apply absolute w-full h-full top-0 -left-full opacity-0 pointer-events-none;
+    content: '';
+    background: linear-gradient(90deg, transparent, rgba(0, 200, 224, 0.3), transparent);
+    transition: transform 0.5s;
+}
+
+.btn-ri:hover::before {
+    @apply opacity-100;
+    transform: translateX(100%);
 }
