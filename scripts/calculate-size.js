@@ -3,7 +3,7 @@ import path from 'node:path';
 import zlib from 'node:zlib';
 
 async function getBundleSize() {
-    const extensions = new Set(['.js', '.css', 'json', '.svg']);
+    const extensions = new Set(['.js', '.css', '.json', '.svg']);
 
     let rawSize = 0;
     let gzipSize = 0;

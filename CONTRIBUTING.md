@@ -23,7 +23,7 @@ Where:
 
 Generally, regular commits do not require any optional fields. Merge commits, however, should include a scope, and preferably a body as well. Merge commits also have the PR number in brackets appended to the subject line, for example, `feat(home): add new section to homepage (#711)`.
 
-Additionally, if a commit reverts a previous commit, the subject should be th full original commit message including type and scope. Commit hash should be included in the footer, for example, `Reverts commit <hash>`.
+Additionally, if a commit reverts a previous commit, the subject should be the full original commit message including type and scope. Commit hash should be included in the footer, for example, `Reverts commit <hash>`.
 
 For release commits, simply put the version number in the subject line, for example, `release: v1.0.0`.
 
