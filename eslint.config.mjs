@@ -7,6 +7,11 @@ import pluginVue from 'eslint-plugin-vue';
 
 export default tseslint.config(
     {
+        env: {
+            node: true,
+        },
+    },
+    {
         files: ['**/*.{js,ts,vue}'],
     },
     {
