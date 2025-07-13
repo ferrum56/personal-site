@@ -1,0 +1,48 @@
+name: post-ci
+
+on:
+  workflow_run:
+    workflows: [ci]
+    types:
+      - completed
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  build-upload:
+    runs-on: ubuntu-latest
+    if: >
+      github.event.workflow_run.event == 'push' &&
+      github.event.workflow_run.conclusion == 'success'
+    timeout-minutes: 10
+    name: 'build-upload::ubuntu-latest::node-20'
+
+    permissions:
+      contents: read
+      actions: write
+
+    steps:
+      - name: Checkout master branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - name: Enable corepack
+        run: corepack enable
+      - name: Install Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Build project
+        run: yarn build
+      - name: Generate size report
+        run: node scripts/calculate-size.js size-master.json
+      - name: Upload size report
+        uses: actions/upload-artifact@v4
+        with:
+          name: deployment-bundle-size
+          path: size-master.json
+          overwrite: true

@@ -2,6 +2,7 @@
 
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
+import globals from 'globals';
 import prettierConfig from 'eslint-config-prettier';
 import pluginVue from 'eslint-plugin-vue';
 
@@ -15,6 +16,7 @@ export default tseslint.config(
     {
         languageOptions: {
             globals: {
+                ...globals.node,
                 __PROJECT_VERSION__: 'readonly',
                 __EO2024__: 'readonly',
             },
