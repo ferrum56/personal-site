@@ -1,6 +1,7 @@
 # Personal Website
 
 ![CI workflow](https://github.com/ferrum56/personal-site/actions/workflows/ci.yml/badge.svg)
+![Post-CI workflow](https://github.com/ferrum56/personal-site/actions/workflows/post-ci.yml/badge.svg)
 ![GitHub License](https://img.shields.io/github/license/ferrum56/personal-site)
 ![Website deployment](https://img.shields.io/badge/website-online-brightgreen)
 ![Project version](https://img.shields.io/github/package-json/v/ferrum56/personal-site)
