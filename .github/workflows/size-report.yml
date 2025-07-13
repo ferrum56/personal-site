@@ -1,0 +1,54 @@
+name: size report
+
+on:
+  workflow_run:
+    workflows: [ci]
+    types:
+      - completed
+
+jobs:
+  comment-pr:
+    runs-on: ubuntu-latest
+    if: >
+      github.event.workflow_run.event == 'pull_request' &&
+      github.event.workflow_run.conclusion == 'success'
+    timeout-minutes: 10
+    name: 'comment-pr::ubuntu-latest::node-20'
+
+    permissions:
+      contents: read
+      actions: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+      - name: Enable corepack
+        run: corepack enable
+      - name: Install Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20.x
+          cache: 'yarn'
+      - name: Install dependencies
+        run: yarn install --immutable
+      - name: Generate size report
+        run: node scripts/calculate-size.js size-pr.json
+      - name: Download size report
+        uses: dawidd6/action-download-artifact@v11
+        with:
+          name: deployment-bundle-size
+          workflow: post-ci.yml
+          branch: master
+          path: .
+          check_artifacts: true
+      - name: Generate diff report
+        run: node scripts/report-diff.js size-master.json size-pr.json ${{ github.event.workflow_run.head_branch }} > diff-report.md
+      - name: Create comment
+        uses: peter-evans/create-or-update-comment@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          issue-number: ${{ github.event.workflow_run.pull_requests[0].number }}
+          body-path: ./diff-report.md
