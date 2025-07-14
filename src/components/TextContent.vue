@@ -2,13 +2,13 @@
 import TextLine from './TextLine.vue';
 
 defineProps<{
-    article: string[];
+    content: string[];
 }>();
 </script>
 
 <template>
     <article class="font-text text-lg">
-        <p v-for="paragraph in article" :key="paragraph">
+        <p v-for="paragraph in content" :key="paragraph">
             <TextLine :text="paragraph" />
         </p>
     </article>

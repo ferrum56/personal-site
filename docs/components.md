@@ -135,21 +135,21 @@ A component used to render chunks from a single rich text string. Further stylin
 ### `TextContent`
 
 #### Overview
-A component used within `ContentSection` to render rich text content as an article. Use caution when further styling this component.
+A component used within different types of sections to render rich text content as an article. Use caution when further styling this component.
 
 #### Status
 - [x] Done
 - [x] No further work needed
 
 #### Props
-- `article: string[]` — List of paragraphs to be rendered
+- `content: string[]` — List of paragraphs to be rendered
 
 ---
 
-### `ContentSectionTitle`
+### `SectionTitle`
 
 #### Overview
-A component used within `ContentSection` to render the decorated title. Use caution when further styling this component.
+A component used within different types of sections to render decorated title. Use caution when further styling this component.
 
 #### Status
 - [ ] Done
@@ -161,19 +161,21 @@ A component used within `ContentSection` to render the decorated title. Use caut
 
 ---
 
-### `ContentSection`
+### `TextSection`
 
 #### Overview
-A section component designed to render different types of content and an optional title. This component is mostly un-styled and relies on its children for styling themselves.
+A section component designed to render text-based sections. A text-based section is in the format of a title and a block of content. This component is mostly un-styled and relies on its children for styling themselves.
 
 #### Status
 - [x] Done
-- [ ] No further work needed
+- [x] No further work needed
+
+### Props
+- `id: number` — Required by `SectionTitle` props
+- `title: string` — Required by `SectionTitle` props
 
 #### Slots
-- `title` — Title of the section, must be a `ContentSectionTitle`
-- `content` — Main content of the section, must be one of the components ending with `Content`, such as `TextContent`
-- `default` — Anything else to append to the end of the section
+- `default` — Any content to be rendered inside the section
 
 ---
 

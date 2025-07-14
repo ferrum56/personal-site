@@ -3,9 +3,9 @@
   "data": {
     "me": {
       "id": 70890,
-      "title": "About Me",
+      "title": "Greetings",
       "text": [
-        "Nice to meet you, visitor. My name is Alan, a CS undergrad at {link|UBC|https://www.ubc.ca/}, a software developer with passion, a knowledge seeker and a lifelong learner."
+        "Nice to meet you. My name is Alan, a CS undergrad at {link|UBC|https://www.ubc.ca/}, a software developer with passion, a knowledge seeker and a lifelong learner."
       ]
     },
     "site": {
