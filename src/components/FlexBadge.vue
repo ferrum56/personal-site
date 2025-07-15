@@ -6,12 +6,15 @@ import BaseIconText from './BaseIconText.vue';
 defineProps<{
     label: string;
     icon?: IconDefinition;
+    to?: string;
 }>();
 </script>
 
 <template>
-    <span class="badge">
+    <RouterLink v-if="to" v-bind="$attrs" :to="to" class="badge">
         <BaseIconText :label="label" :icon="icon" />
-        <slot />
+    </RouterLink>
+    <span v-else v-bind="$attrs" class="badge">
+        <BaseIconText :label="label" :icon="icon" />
     </span>
 </template>

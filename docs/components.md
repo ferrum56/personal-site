@@ -4,6 +4,10 @@ This document provides a detailed overview of components used in this project, s
 
 ---
 
+## Basic
+
+Basic components are the building blocks of the UI, providing fundamental functionality without extensive styling or complex behavior. They are designed to be simple and reusable.
+
 ### `BaseIconText`
 
 #### Overview
@@ -15,14 +19,12 @@ The most basic component. It renders a FontAwesome icon and a label directly wit
 
 #### Props
 - `label: string` — Text label displayed to the right of icon
-- `icon: IconDefinition` — FontAwesome icon, must use JS import
-
----
+- `icon: IconDefinition` — FontAwesome icon, must be imported with TypeScript code
 
 ### `BaseLink`
 
 #### Overview
-A basic component with either an anchor or a `RouterLink` directly at the root, mostly un-styled. It renders whatever is provided from the slot as a clickable link, and fallbacks to the URL if given nothing. Fallthrough attributes are bound to both elements.
+A basic component with either an anchor or a `RouterLink` directly at the root, mostly un-styled. It renders whatever is provided from the slot as a clickable link, and falls back to the URL if given nothing. Fallthrough attributes are bound to both elements.
 
 #### Status
 - [x] Done
@@ -34,8 +36,6 @@ A basic component with either an anchor or a `RouterLink` directly at the root, 
 
 #### Slots
 - `default` — Content to be rendered inside the link, can be anything that makes sense
-
----
 
 ### `TextLink`
 
@@ -50,8 +50,6 @@ Derived from `BaseLink`, this is a styled label-only link used within a block of
 - `to: string` — Required by `BaseLink` props
 - `label: string` — Required by `BaseLink` slot
 - `public: boolean` — Required by `BaseLink` props
-
----
 
 ### `ButtonLink`
 
@@ -68,8 +66,6 @@ Derived from `BaseLink` and `BaseIconText`, renders a link that looks like a but
 - `label: string` — Required by `BaseIconText` props
 - `icon: IconDefinition` — Required by `BaseIconText` props
 
----
-
 ### `NavLink`
 
 #### Overview
@@ -82,8 +78,6 @@ A component specifically used to render a router link for navigation, within a n
 #### Props
 - `to: string` — The destination URL, must be an in-app route
 - `label: string` — The page name
-
----
 
 ### `FlexButton`
 
@@ -98,12 +92,10 @@ Derived from `BaseIconText`, renders a simple un-styled button.
 - `label: string` — Required by `BaseIconText` props
 - `icon: IconDefinition` — Required by `BaseIconText` props
 
----
-
 ### `FlexBadge`
 
 #### Overview
-Derived from `BaseIconText`, this is a mostly un-styled badge component that can be used to display an inline label icon combo, with optional additional content.
+Derived from `BaseIconText`, this is a mostly un-styled badge component that can be used to display an inline label icon combo, with optional link within the site. Fallthrough attributes are bound to both elements.
 
 #### Status
 - [x] Done
@@ -112,11 +104,7 @@ Derived from `BaseIconText`, this is a mostly un-styled badge component that can
 #### Props
 - `label: string` — Required by `BaseIconText` props
 - `icon: IconDefinition` — Required by `BaseIconText` props
-
-#### Slots
-- `default` — Additional content to be rendered inside the badge, such as a button
-
----
+- `to: string` — Optional link within the site, the badge will not be clickable if not provided
 
 ### `TextLine`
 
@@ -131,6 +119,10 @@ A component used to render chunks from a single rich text string. Further stylin
 - `text: string` — Raw text string to be rendered in chunk
 
 ---
+
+## Content
+
+Content components focus on matching the content to the design, providing a way to render structured content stored in JSON files. They are designed to be used within sections or containers.
 
 ### `TextContent`
 
