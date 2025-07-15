@@ -104,7 +104,7 @@ Derived from `BaseIconText`, this is a mostly un-styled badge component that can
 #### Props
 - `label: string` — Required by `BaseIconText` props
 - `icon: IconDefinition` — Required by `BaseIconText` props
-- `to: string` — Optional link within the site, the badge will not be clickable if not provided
+- `to: RouteLocationRaw` — Optional link within the site, the badge will not be clickable if not provided
 
 ### `TextLine`
 

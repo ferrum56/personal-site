@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { RouteLocationRaw } from 'vue-router';
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 import BaseIconText from './BaseIconText.vue';
@@ -6,7 +7,7 @@ import BaseIconText from './BaseIconText.vue';
 defineProps<{
     label: string;
     icon?: IconDefinition;
-    to?: string;
+    to?: RouteLocationRaw;
 }>();
 </script>
 
