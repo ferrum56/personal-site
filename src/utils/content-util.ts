@@ -4,6 +4,18 @@ export interface TextData {
     text: string[];
 }
 
+export interface ListItem {
+    label: string;
+    value: string | string[];
+    slot?: string;
+}
+
+export interface ListData {
+    id: number;
+    title: string;
+    items: ListItem[];
+}
+
 // Required syntax for type guard
 const chunkTypes = ['text', 'link', 'redact'] as const;
 type ChunkType = (typeof chunkTypes)[number];

@@ -12,7 +12,7 @@ defineProps<{
 </script>
 
 <template>
-    <RouterLink v-if="to" v-bind="$attrs" :to="to" class="badge">
+    <RouterLink v-if="to" v-bind="$attrs" :to="to" class="badge badge-link">
         <BaseIconText :label="label" :icon="icon" />
     </RouterLink>
     <span v-else v-bind="$attrs" class="badge">

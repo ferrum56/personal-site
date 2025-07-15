@@ -136,7 +136,26 @@ A component used within different types of sections to render rich text content 
 #### Props
 - `content: string[]` — List of paragraphs to be rendered
 
+### `ListContent`
+
+#### Overview
+A component used within different types of sections to render the text-based content as an unordered list. Use caution when further styling this component.
+
+#### Status
+- [x] Done
+- [x] No further work needed
+
+#### Props
+- `content: ListItem[]` — The list to be rendered
+
+#### Slots
+- `dynamic` — Available when item specifies `slot` property, will be appended to the end of the item
+
 ---
+
+## Sections
+
+Sections are components that group content together, providing a structured layout for displaying information. They are designed to be used within containers to form a coherent page structure.
 
 ### `SectionTitle`
 
