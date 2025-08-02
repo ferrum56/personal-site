@@ -1163,12 +1163,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:^24.0.13":
-  version: 24.0.13
-  resolution: "@types/node@npm:24.0.13"
+"@types/node@npm:^24.1.0":
+  version: 24.1.0
+  resolution: "@types/node@npm:24.1.0"
   dependencies:
     undici-types: "npm:~7.8.0"
-  checksum: 10c0/e1f3d4ea8973b1f2f987814ac5343d05ad8b56bf7fa41755295dee0ce0f7b4e2de4f3daef5296429180228970cef0d70f2ad873c61dbafc6f5eeca9d023aba76
+  checksum: 10c0/6c4686bc144f6ce7bffd4cadc3e1196e2217c1da4c639c637213719c8a3ee58b6c596b994befcbffeacd9d9eb0c3bff6529d2bc27da5d1cb9d58b1da0056f9f4
   languageName: node
   linkType: hard
 
@@ -3904,7 +3904,7 @@ __metadata:
     "@fortawesome/free-solid-svg-icons": "npm:^7.0.0"
     "@fortawesome/vue-fontawesome": "npm:^3.1.1"
     "@tailwindcss/vite": "npm:^4.1.11"
-    "@types/node": "npm:^24.0.13"
+    "@types/node": "npm:^24.1.0"
     "@vitejs/plugin-vue": "npm:^5.2.1"
     "@vitest/coverage-istanbul": "npm:^3.1.4"
     "@vue/tsconfig": "npm:^0.7.0"
