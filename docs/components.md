@@ -4,7 +4,7 @@ This document provides a detailed overview of components used in this project, s
 
 ---
 
-## Basic
+## Basic Components
 
 Basic components are the building blocks of the UI, providing fundamental functionality without extensive styling or complex behavior. They are designed to be simple and reusable.
 
@@ -170,8 +170,6 @@ A component used within different types of sections to render decorated title. U
 - `id: number` — The id inherited from parent section
 - `title: string` — Title of the section it belongs to
 
----
-
 ### `TextSection`
 
 #### Overview
@@ -181,14 +179,36 @@ A section component designed to render text-based sections. A text-based section
 - [x] Done
 - [x] No further work needed
 
-### Props
+#### Props
 - `id: number` — Required by `SectionTitle` props
 - `title: string` — Required by `SectionTitle` props
 
 #### Slots
 - `default` — Any content to be rendered inside the section
 
+### `AccordionSection`
+
+#### Overview
+A section component designed to render an item inside an accordion. An accordion section is usually in the format of a clickable title and a block of collapsible content. This component is partially styled and relies on its children for styling themselves.
+
+#### Status
+- [ ] Done
+- [ ] No further work needed
+
+#### Props
+- `id: number` — Required by `SectionTitle` props
+- `title: string` — Required by `SectionTitle` props
+- `level: string` — The security level affecting section style
+- `disabled: boolean` — Required by `AccordionItem` props
+
+#### Slots
+- `default` — Any content to be rendered inside the section
+
 ---
+
+## Containers
+
+Containers are components that provide a layout for grouping sections and content together. They are designed to be used as the main structure(s) of a page, allowing for flexible arrangement of content.
 
 ### `TextContainer`
 
@@ -207,6 +227,10 @@ A container component designed to render general text-based content. This compon
 
 ---
 
+## Universal Components
+
+Universal components are components that are only used once on the entire website, serving specific purposes such as navigation, banners, or footers. They are designed to be used as-is without further styling or extension.
+
 ### `HomeBanner`
 
 #### Overview
@@ -215,8 +239,6 @@ A banner appearing on the home page for page-entry impressions. Do not, under an
 #### Status
 - [ ] Done
 - [ ] No further work needed
-
----
 
 ### `AppHeader`
 
@@ -227,8 +249,6 @@ The universal header of this website, used for navigation purposes. Do not, unde
 - [ ] Done
 - [ ] No further work needed
 
----
-
 ### `AppFooter`
 
 #### Overview
@@ -237,8 +257,6 @@ The universal footer of this website. Do not, under any circumstances, style or 
 #### Status
 - [x] Done
 - [ ] No further work needed
-
----
 
 ### `AppPanel`
 
