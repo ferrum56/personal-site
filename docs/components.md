@@ -220,7 +220,22 @@ A container component designed to render general text-based content. This compon
 - [ ] No further work needed
 
 #### Props
-- `title` — Title of the container
+- `title: string` — Title of the container
+
+#### Slots
+- `default` — Main content assembled from other components
+
+### `AccordionContainer`
+
+#### Overview
+A container component designed to render content in accordion sections. This component is partially styled, use caution when further styling it.
+
+#### Status
+- [ ] Done
+- [ ] No further work needed
+
+#### Props
+- `defaultValue: string[]` — Required by `AccordionRoot` props
 
 #### Slots
 - `default` — Main content assembled from other components

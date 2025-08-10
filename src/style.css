@@ -5,13 +5,36 @@
     --color-ri-cerulean: #007ba7;
     --color-ri-glow1: #00a1e0;
     --color-ri-glow2: #00c8e0;
-    --color-ri-back1: #0f1a20;
-    --color-ri-back2: #1a2e3a;
-    --color-ri-fore: #e0e0e0;
+    --color-ri-back1: #0f1a20; /* Deprecated naming */
+    --color-ri-black: #0f1a20;
+    --color-ri-back2: #1a2e3a; /* Deprecated naming */
+    --color-ri-navy: #1a2e3a;
+    --color-ri-fore: #e0e0e0; /* Deprecated naming */
     --color-ri-white: #e0e0e0;
     --color-ri-warn: #ff6b35;
     --color-ri-subtext: #a0b2b8;
     --color-ri-separator: #004d66;
+
+    --animate-slide-down: slide-down 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+    --animate-slide-up: slide-up 0.3s cubic-bezier(0.87, 0, 0.13, 1);
+
+    @keyframes slide-down {
+        from {
+            max-height: 0;
+        }
+        to {
+            max-height: 100vh;
+        }
+    }
+
+    @keyframes slide-up {
+        from {
+            max-height: 100vh;
+        }
+        to {
+            max-height: 0;
+        }
+    }
 }
 
 :root {
@@ -41,6 +64,10 @@ body {
 
 .badge-decor {
     @apply px-2 py-1 font-number rounded-full;
+}
+
+.badge-link {
+    @apply px-2 py-1 font-number rounded-full; /* TODO */
 }
 
 .btn {
