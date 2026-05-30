@@ -1757,18 +1757,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/tsconfig@npm:^0.7.0":
-  version: 0.7.0
-  resolution: "@vue/tsconfig@npm:0.7.0"
+"@vue/tsconfig@npm:^0.9.1":
+  version: 0.9.1
+  resolution: "@vue/tsconfig@npm:0.9.1"
   peerDependencies:
-    typescript: 5.x
+    typescript: ">= 5.8"
     vue: ^3.4.0
   peerDependenciesMeta:
     typescript:
       optional: true
     vue:
       optional: true
-  checksum: 10c0/5b36db5ee9e14b47e516164a21ebbf24e558042a16162a69291fe3dc0dcdf598bc0d9dada1b1008d95afab97a22396e8579e4f0df141a015ffa0837bf6ccbf2f
+  checksum: 10c0/eed93e10edbe09830afa0b728ca658b6249cba1467c74487d1dc8cfabcb57297d78fed6b2ba0c52f9ba99c8e0ba5e56caf320b8f39a71dacfebebd1bd69cc2a9
   languageName: node
   linkType: hard
 
@@ -4101,7 +4101,7 @@ __metadata:
     "@types/node": "npm:^24.1.0"
     "@vitejs/plugin-vue": "npm:^6.0.1"
     "@vitest/coverage-istanbul": "npm:^3.1.4"
-    "@vue/tsconfig": "npm:^0.7.0"
+    "@vue/tsconfig": "npm:^0.9.1"
     "@vueuse/core": "npm:^13.6.0"
     eslint: "npm:^9.31.0"
     eslint-config-prettier: "npm:^9.1.0"
